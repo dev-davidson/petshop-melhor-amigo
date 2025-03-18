@@ -4,28 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petshop Melhor Amigo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/home.css">
+
 </head>
 <body>
 
     <!-- Cabeçalho -->
-    <header>
-        <h1>Petshop Melhor Amigo</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="bg-primary py-3">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <img src="./images/logo1.png" alt="Logo Petshop Melhor Amigo" class="logo">
+            <p class="slogan text-white text-center">Cuidando com <span class="slogan-destaque">amor</span>, porque seu pet merece o <span class="slogan-destaque">melhor!</span></p>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="galeria.html">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Banner Principal -->
-    <section id="banner">
-        <h2>Seu pet merece o melhor cuidado!</h2>
-        <p>Banho, tosa e ração premium para seu amigo.</p>
-        <a href="produtos.html" class="btn">Ver Produtos</a>
+   <!-- Banner Principal - Carrossel Fullscreen -->
+    <section id="banner" class="mt-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/banner1.jpg" class="d-block w-100" alt="Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner2.webp" class="d-block w-100" alt="Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner3.jpg" class="d-block w-100" alt="Banner 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
     </section>
 
     <!-- Seção de Introdução -->
@@ -50,6 +77,6 @@
     <footer>
         <p>&copy; 2025 Petshop Melhor Amigo. Todos os direitos reservados.</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
