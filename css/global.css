@@ -1,0 +1,54 @@
+/* Arquivo global.css - Contém estilos gerais (cores, cabeçalho, rodapé, fontes) */
+:root {
+    --cor-primaria: #1E90FF; /* Azul Dodger - Confiança e tranquilidade */
+    --cor-secundaria: #FFA500; /* Laranja - Energia e destaque */
+    --cor-texto: #333333; /* Cinza escuro - Melhor contraste e leitura */
+    --cor-fundo: #FFFFFF; /* Branco - Fundo limpo e moderno */
+    --cor-hover: #FF4500; /* Laranja Vermelho - Destaque para interações */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
