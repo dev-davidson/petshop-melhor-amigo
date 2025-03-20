@@ -57,6 +57,10 @@
         </div>
     </section>
 
+    <section id="agendamento-aviso">
+        <p class="aviso-agendamento">📅 Faça seu agendamento online e garanta o melhor atendimento para seu pet! Role a página para mais detalhes.</p>
+    </section>
+    
      <!-- Seção Quem Somos -->
     <section id="quem-somos">
         <div class="container">
@@ -77,6 +81,38 @@
         </div>
     </section>
 
+     <!-- Seção agendamento -->
+     <section id="agendamento">
+        <h2>Agendamento Online</h2>
+        <p>Escolha a data e o serviço desejado para seu pet e agende com facilidade!</p>
+        <form>
+            <label for="nome">Nome do Tutor:</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <label for="celular">Número de Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+    
+            <label for="pet">Nome do Pet:</label>
+            <input type="text" id="pet" name="pet" required>
+    
+            <label for="servico">Serviço:</label>
+            <select id="servico" name="servico">
+                <option value="banho">Banho</option>
+                <option value="tosa">Tosa</option>
+                <option value="banho-tosa">Banho e Tosa</option>
+            </select>
+    
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+    
+            <label for="hora">Horário:</label>
+            <input type="time" id="hora" name="hora" required>
+    
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+    
+    
      <!-- Seção de Produtos -->
     <section id="produtos">
         <h2>Nossos Produtos</h2>
@@ -93,7 +129,6 @@
                     <div class="produto-back">
                         <h3><strong>Ração Premium</strong></h3>
                         <p>Nutrição completa e balanceada para cães e gatos, formulada com ingredientes de alta qualidade para promover saúde e energia.</p>
-                        <p>Contém proteínas essenciais, vitaminas e minerais para fortalecer a imunidade e garantir um pelo brilhante.</p>
                         <p><strong>R$ 49,90</strong></p>
                         <a href="#" class="btn-produto">Comprar</a>
                     </div>
@@ -132,7 +167,7 @@
                     </div>
                     <div class="produto-back">
                         <h3><strong>Produtos de Higiene</strong></h3>
-                        <p>Cuide da saúde e bem-estar do seu pet com nossa linha completa de higiene. Inclui shampoos, condicionadores, escovas e itens para limpeza dental.</p>
+                        <p>Cuide da saúde e bem-estar do seu pet com nossa linha completa de higiene. Inclui shampoos, condicionadores, escovas.</p>
                         <p><h6>A partir de: </h6><strong>R$ 25,90</strong></p>
                         <a href="#" class="btn-produto">Comprar</a>
                     </div>
