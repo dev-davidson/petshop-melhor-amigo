@@ -1,0 +1,153 @@
+/* Estilos específicos para a página de serviços */
+
+#servicos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#servicos h2 {
+    color: var(--cor-primaria);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#servicos p {
+    font-size: 18px;
+    color: var(--cor-texto);
+    margin-bottom: 30px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria h3 {
+    color: var(--cor-secundaria);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.servico {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.servico img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    font-size: 16px;
+    color: var(--cor-texto);
+}
+
+@media (max-width: 768px) {
+    .servico {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Seção Recomendações */
+.img-fluid {
+    border-radius: 10px 10px 0 0;
+}
+.modal-body p {
+    text-align: justify;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#servicos {
+    padding: 50px 20px;
+}
+
+#servicos h2 {
+    color: var(--cor-primaria);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.servico {
+    margin-bottom: 30px;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servico p {
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    font-size: 18px;
+}
+
+/* Botões de Modal - Cor personalizada */
+.btn-warning {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-warning:hover {
+    background-color: var(--cor-hover); /* Cor mais escura para o hover */
+    color: var(--cor-fundo);
+}
+
+/* Seção Recomendações e Serviços lado a lado */
+#servicos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#servicos .col-md-6 {
+    flex: 1;
+    margin: 10px;
+}
+
+#servicos .servico-numero {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    margin-right: 15px;
+}
+
+/* Responsividade - Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    .btn-warning {
+        width: 100%; /* Botão ocupa toda a largura em telas menores */
+    }
+
+    .col-md-6 {
+        flex: 1 100%;
+    }
+
+    .servico {
+        padding: 15px;
+    }
+
+    .modal-body img {
+        width: 100%;
+        height: auto;
+    }
+}

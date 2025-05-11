@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/home.css">
-    <!-- Adicionando a biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header class="bg-primary py-3">
         <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-            <img src="./imagens/logo1.png" alt="Logo Petshop Melhor Amigo" class="logo">
+            <img src="./imagens/home/logo1.png" alt="Logo Petshop Melhor Amigo" class="logo">
             <p class="slogan text-white text-center">Cuidando com <span class="slogan-destaque">amor</span>, porque seu pet merece o <span class="slogan-destaque">melhor!</span></p>
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="servicos.html">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="galeria.html">Galeria</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="contato.html">Contato</a></li>
                 </ul>
@@ -29,7 +32,6 @@
         </div>
     </header>
 
-   <!-- Banner Principal - Carrossel Fullscreen -->
     <section id="banner" class="mt-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -39,35 +41,37 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./imagens/banner1.jpg" class="d-block w-100" alt="Banner 1">
+                    <img src="./imagens//home/banner1.jpg" class="d-block w-100" alt="Banner 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="./imagens/banner2.jpg" class="d-block w-100" alt="Banner 2">
+                    <img src="./imagens//home/banner2.jpg" class="d-block w-100" alt="Banner 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="./imagens/banner3.jpg" class="d-block w-100" alt="Banner 3">
+                    <img src="./imagens//home/banner3.jpg" class="d-block w-100" alt="Banner 3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
             </button>
         </div>
     </section>
 
     <section id="agendamento-aviso">
-        <p class="aviso-agendamento">📅 Faça seu agendamento online e garanta o melhor atendimento para seu pet! Role a página para mais detalhes.</p>
+        <p class="aviso-agendamento"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Eight O’Clock.png" alt="Eight O’Clock" width="35" height="35" /> Faça seu agendamento online e garanta o melhor atendimento para seu pet! Role a página para mais detalhes.</p>
     </section>
-    
-     <!-- Seção Quem Somos -->
+
+   <!-- Seção Quem Somos -->
     <section id="quem-somos">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 quem-somos-imagens">
-                    <img src="./imagens/fachada.jpg" alt="Fachada do Petshop">
-                    <img src="./imagens/interior.jpg" alt="Interior do Petshop">
+                    <img src="./imagens//home/fachada.jpg" alt="Fachada do Petshop">
+                    <img src="./imagens//home/interior.jpg" alt="Interior do Petshop">
                 </div>
                 <div class="col-md-6 quem-somos-texto">
                     <h2>Quem Somos</h2>
@@ -82,101 +86,151 @@
     </section>
 
      <!-- Seção agendamento -->
-     <section id="agendamento">
-        <h2>Agendamento Online</h2>
-        <p>Escolha a data e o serviço desejado para seu pet e agende com facilidade!</p>
-        <form>
-            <label for="nome">Nome do Tutor:</label>
-            <input type="text" id="nome" name="nome" required>
-    
-            <label for="celular">Número de Celular:</label>
-            <input type="tel" id="celular" name="celular" required>
-    
-            <label for="pet">Nome do Pet:</label>
-            <input type="text" id="pet" name="pet" required>
-    
-            <label for="servico">Serviço:</label>
-            <select id="servico" name="servico">
-                <option value="banho">Banho</option>
-                <option value="tosa">Tosa</option>
-                <option value="banho-tosa">Banho e Tosa</option>
-            </select>
-    
-            <label for="data">Data:</label>
-            <input type="date" id="data" name="data" required>
-    
-            <label for="hora">Horário:</label>
-            <input type="time" id="hora" name="hora" required>
-    
-            <button type="submit">Agendar</button>
-        </form>
-    </section>
-    
-    
-     <!-- Seção de Produtos -->
-    <section id="produtos">
-        <h2>Nossos Produtos</h2>
-        <p>Oferecemos uma ampla variedade de produtos para o bem-estar do seu pet, garantindo qualidade, conforto e diversão.</p>
-        <p>Confira nossa linha completa de <strong style="color:#FFA500;">rações premium</strong>, <strong style="color:#FFA500;">brinquedos interativos</strong>, <strong style="color:#FFA500;">acessórios modernos</strong> e <strong style="color:#FFA500;">produtos de higiene</strong> para manter seu pet sempre saudável e feliz.</p>
-        <p>Todos os nossos produtos são selecionados com cuidado para atender às necessidades de cães e gatos de todas as idades e tamanhos.</p>
-        <p>Confira nossa linha de rações, brinquedos e acessórios.</p>
-        <div class="produtos-container">
-            <div class="produto">
-                <div class="produto-inner">
-                    <div class="produto-front">
-                        <img src="./imagens/racao.jpg" alt="Ração Premium">
+     <section id="agendamento" class="container my-5">
+        <div class="row align-items-center">
+            <!-- Formulário -->
+            <div class="col-md-6">
+                <h2 class="section-title">Envie sua Solicitação de Agendamento</h2>
+                <p>Preencha os dados abaixo e agende um horário para o seu pet!</p>
+                <form id="agendamento-form">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
                     </div>
-                    <div class="produto-back">
-                        <h3><strong>Ração Premium</strong></h3>
-                        <p>Nutrição completa e balanceada para cães e gatos, formulada com ingredientes de alta qualidade para promover saúde e energia.</p>
-                        <p><strong>R$ 49,90</strong></p>
-                        <a href="#" class="btn-produto">Comprar</a>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="data" class="form-label">Data do Agendamento</label>
+                        <input type="date" class="form-control" id="data" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="3" placeholder="Observações"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-agendamento">Agendar</button>
+                </form>
+                <div id="mensagem-sucesso" class="alert alert-success alert-dismissible fade show mt-3" role="alert" style="display: none;">
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Dog.png" alt="Dog" width="30" height="30"/>Agendamento enviado com sucesso! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" alt="Cat" width="30" height="30" />
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                </div>    
+                  
             </div>
-            <div class="produto">
-                <div class="produto-inner">
-                    <div class="produto-front">
-                        <img src="./imagens/brinquedos.jpg" alt="Brinquedos Interativos">
-                    </div>
-                    <div class="produto-back">
-                        <h3><strong>Brinquedos Interativos</strong></h3>
-                        <p>Estimule o corpo e a mente do seu pet com nossos brinquedos interativos. Desenvolvidos para proporcionar diversão e incentivar o aprendizado.</p>
-                        <p><h6>A partir de: </h6><strong>R$ 19,90</strong></p>
-                        <a href="#" class="btn-produto">Comprar</a>
-                    </div>
+    
+            <!-- Imagem com bordas onduladas -->
+            <div class="col-md-6 text-center">
+                <div class="img-wave-container">
+                  <img src="./imagens//home/agendamento.png" alt="Pet feliz" class="img-wave">
+                  <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave-svg">
+                    <path d="M0.00,49.98 C150.00,150.00 349.63,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+                      style="stroke: none; fill: white;"></path>
+                  </svg>
                 </div>
-            </div>
-            <div class="produto">
-                <div class="produto-inner">
-                    <div class="produto-front">
-                        <img src="./imagens/acessorios.jpg" alt="Acessórios">
-                    </div>
-                    <div class="produto-back">
-                        <h3><strong>Acessórios para Pets</strong></h3>
-                        <p>Deixe seu pet estiloso e confortável com nossa linha de acessórios. Desde coleiras e guias até camas e almofadas aconchegantes.</p>
-                        <p><h6>A partir de: </h6><strong>R$ 29,90</strong></p>
-                        <a href="#" class="btn-produto">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="produto">
-                <div class="produto-inner">
-                    <div class="produto-front">
-                        <img src="./imagens/higiene.jpg" alt="Produtos de Higiene">
-                    </div>
-                    <div class="produto-back">
-                        <h3><strong>Produtos de Higiene</strong></h3>
-                        <p>Cuide da saúde e bem-estar do seu pet com nossa linha completa de higiene. Inclui shampoos, condicionadores, escovas.</p>
-                        <p><h6>A partir de: </h6><strong>R$ 25,90</strong></p>
-                        <a href="#" class="btn-produto">Comprar</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            </div>    
         </div>
     </section>
-
+    
+    
+    <!-- Seção de Produtos -->
+<section id="produtos">
+  <h2>Nossos Produtos</h2>
+  <p>Seu pet merece o melhor! Por isso, oferecemos uma seleção cuidadosamente escolhida de produtos premium, combinando <strong>qualidade</strong>, <strong>conforto</strong> e <strong>diversão</strong> para o bem-estar do seu companheiro.</p>  
+  <p>Explore nossa linha completa, incluindo:  
+    <strong style="color:#FFA500;">rações nutritivas</strong> para uma alimentação balanceada,  
+    <strong style="color:#FFA500;">brinquedos inteligentes</strong> que estimulam física e mentalmente e  
+    <strong style="color:#FFA500;">acessórios ergonômicos</strong> 
+  </p>  
+  <p>Cada produto é testado e aprovado por especialistas, garantindo segurança e satisfação para pets</p>  
+  
+    <div class="produtos-container">
+      <!-- Produto 1 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens//home/racao.jpg" alt="Ração Premium">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Ração Premium</strong></h3>
+            <p>Nutrição completa e balanceada para cães e gatos, formulada com ingredientes de alta qualidade para promover saúde e energia.</p>
+            <p><h6>A partir de: </h6><strong>R$ 49,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Produto 2 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens/home/brinquedos.jpg" alt="Brinquedos Interativos">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Brinquedos Interativos</strong></h3>
+            <p>Estimule o corpo e a mente do seu pet com nossos brinquedos interativos. Desenvolvidos para proporcionar diversão e incentivar o aprendizado.</p>
+            <p><h6>A partir de: </h6><strong>R$ 19,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Produto 3 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens/home/acessorios.jpg" alt="Acessórios">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Acessórios para Pets</strong></h3>
+            <p>Deixe seu pet estiloso e confortável com nossa linha de acessórios. Desde coleiras e guias até camas e almofadas aconchegantes.</p>
+            <p><h6>A partir de: </h6><strong>R$ 29,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Produto 4 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens/home/higiene.jpg" alt="Produtos de Higiene">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Produtos de Higiene</strong></h3>
+            <p>Cuide da saúde e bem-estar do seu pet com nossa linha completa de higiene. Inclui shampoos, condicionadores, escovas.</p>
+            <p><h6>A partir de: </h6><strong>R$ 25,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Produto 5 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens/home/petiscos.jpg" alt="Petiscos Naturais">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Petiscos Naturais</strong></h3>
+            <p>Deliciosos snacks 100% naturais, ideais para recompensar seu pet com sabor e saúde.</p>
+            <p><h6>A partir de: </h6><strong>R$ 15,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Produto 6 -->
+      <div class="produto">
+        <div class="produto-inner">
+          <div class="produto-front">
+            <img src="./imagens/home/roupinhas.jpg" alt="Roupinhas para Pets">
+          </div>
+          <div class="produto-back">
+            <h3><strong>Roupinhas para Pets</strong></h3>
+            <p>Estilo e conforto para o seu pet com nossa coleção de roupinhas modernas e fofas.</p>
+            <p><h6>A partir de: </h6><strong>R$ 39,90</strong></p>
+            <a href="#" class="btn-produto">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
     <section id="galeria">
         <h2>Galeria de Fotos</h2>
         <p>Confira alguns dos momentos especiais dos nossos clientes de quatro patas! 
@@ -185,7 +239,7 @@
 
         <div class="galeria-container">
             <div class="galeria-item">
-                <img src="./imagens/banho.jpg" alt="Pet após banho">
+                <img src="./imagens//home/banho.jpg" alt="Pet após banho">
                 <div class="galeria-info">
                     <h3><strong>Banho Refrescante</strong></h3>
                     <p>Pets felizes e cheirosos após o banho!</p>
@@ -194,7 +248,7 @@
             </div>
             
             <div class="galeria-item">
-                <img src="./imagens/brincando.jpg" alt="Cachorro brincando">
+                <img src="./imagens/home/brincando.jpg" alt="Cachorro brincando">
                 <div class="galeria-info">
                     <h3><strong>Momento de Brincar</strong></h3>
                     <p>Nosso espaço para diversão e alegria!</p>
@@ -203,7 +257,7 @@
             </div>
             
             <div class="galeria-item">
-                <img src="./imagens/relaxando.jpg" alt="Gato relaxando">
+                <img src="./imagens/home/relaxando.jpg" alt="Gato relaxando">
                 <div class="galeria-info">
                     <h3><strong>Descanso Perfeito</strong></h3>
                     <p>Gatinhos relaxando depois do atendimento.</p>
@@ -212,7 +266,7 @@
             </div>
             
             <div class="galeria-item">
-                <img src="./imagens/estiloso.jpg" alt="Pet estiloso após tosa">
+                <img src="./imagens/home/estiloso.jpg" alt="Pet estiloso após tosa">
                 <div class="galeria-info">
                     <h3><strong>Estilo e Charme</strong></h3>
                     <p>Pets lindos e estilosos após a tosa!</p>
@@ -223,23 +277,25 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="redes-sociais">
-            <a href="https://www.facebook.com/seupetshop" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/seupetshop" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@seupetshop" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        
-        <hr style="border: 2px solid #FFFFFF; margin: 20px 0;">
-        
-        <p>&copy; 2025 Petshop Melhor Amigo. Desenvolvido por <strong>Davidson</strong> 
-            <a href="https://www.linkedin.com/in/davidson-desenvolvedor/" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="fab fa-linkedin"></i>
-            </a>. Todos os direitos reservados.
-        </p>
-    </footer>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Rodapé --> 
+<footer>
+    <div class="redes-sociais">
+        <a href="https://www.facebook.com/seupetshop" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/seupetshop" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@seupetshop" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
+    <hr style="border: 2px solid #FFFFFF; margin: 10px auto; width: 80%;">
+    
+    <p>&copy; 2025 Petshop Melhor Amigo. Desenvolvido por <strong>Davidson</strong> 
+        <a href="https://www.linkedin.com/in/davidson-desenvolvedor/" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-linkedin"></i>
+        </a>. Todos os direitos reservados.
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/form-agendamento.js"></script>
+  
 </body>
 </html>

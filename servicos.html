@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop Melhor Amigo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/servicos.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="bg-primary py-3">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <img src="./imagens/home/logo1.png" alt="Logo Petshop Melhor Amigo" class="logo">
+            <p class="slogan text-white text-center">Cuidando com <span class="slogan-destaque">amor</span>, porque seu pet merece o <span class="slogan-destaque">melhor!</span></p>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="home.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="galeria.html">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Serviços -->
+    <main>
+        <section id="servicos">
+            <div class="container">
+                <div class="row">
+                    <!-- Seção Recomendações -->
+                    <div class="col-md-6">
+                        <h2>Nossas Recomendações <span class="paw-icon">🐾</span></h2>
+                        
+                        <!-- Recomendações -->
+                        <div class="servico">
+                            <p>"Como escovar os dentes do pet?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-1" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 1 -->
+                        <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel1">Como escovar os dentes do pet?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/escovar.jpg" alt="Escovação de dentes do pet" class="img-fluid">
+                                        <p>Escovar os dentes do seu pet é fundamental para evitar problemas bucais. Use escovas e pastas adequadas para cães e gatos, realizando a escovação de forma gradual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servico">
+                            <p>"Como evitar destruição em casa?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-2" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 2 -->
+                        <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel2">Como evitar destruição em casa?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/destruir.jpg" alt="Como evitar destruição em casa" class="img-fluid">
+                                        <p>Para evitar que seu pet destrua móveis, brinquedos e outros objetos da casa, ofereça brinquedos adequados e crie uma rotina de exercícios.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servico">
+                            <p>"Como fazer seu pet parar de latir excessivamente?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-3" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 3 -->
+                        <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel3">Como fazer seu pet parar de latir excessivamente?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/latir.jpg" alt="Pet latindo" class="img-fluid">
+                                        <p>Ensine seu pet a latir de forma controlada, recompensando-o quando ele estiver quieto e usando métodos de adestramento positivo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servico">
+                            <p>"Como identificar sinais de estresse do dia a dia no seu pet?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-4" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 4 -->
+                        <div class="modal fade" id="modal-4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel4">Como identificar sinais de estresse no seu pet?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/estresse.jpg" alt="Sinais de estresse no pet" class="img-fluid">
+                                        <p>Fique atento aos sinais de estresse como latidos excessivos, tremores e agressividade. Proporcione um ambiente tranquilo e seguro para seu pet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servico">
+                            <p>"Como dar remédio para seu pet de maneira eficaz?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-5" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 5 -->
+                        <div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel5">Como dar remédio para seu pet de maneira eficaz?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/remedio.jpg" alt="Remédio para pet" class="img-fluid">
+                                        <p>Use técnicas de ocultação, como misturar o remédio com comida, ou utilize um petisco especialmente feito para medicação, tornando o processo mais tranquilo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servico">
+                            <p>"Como criar um ambiente confortável para seu pet?"</p>
+                            <!-- Botão para abrir o modal -->
+                            <a href="javascript:void(0)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-6" style="text-transform: none;">Saiba Mais</a>
+                        </div>
+
+                        <!-- Modal 6 -->
+                        <div class="modal fade" id="modal-6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel6">Como criar um ambiente confortável para seu pet?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="imagens/servicos/ambiente.jpg" alt="Ambiente confortável para pet" class="img-fluid">
+                                        <p>Garanta que seu pet tenha um local tranquilo, com cama confortável, brinquedos e espaço para se movimentar. Um ambiente acolhedor ajuda na saúde e bem-estar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção Principais Serviços -->
+                    <div class="col-md-6">
+                        <h2>Main Services <span class="paw-icon">🐾</span></h2>
+                        <div class="servico">
+                            <div class="servico-numero bg-success">1</div>
+                            <h3>Tuis posuere consectetur pellentesque</h3>
+                            <p>Sed nisi turpis pellentesque at ultricies in dapibus in magna.</p>
+                        </div>
+                        <div class="servico">
+                            <div class="servico-numero bg-warning">2</div>
+                            <h3>Juis posuere consectetur pellentesque</h3>
+                            <p>Ted nisi turpis pellentesque at ultriciesyt in dapibus io magna.</p>
+                        </div>
+                        <div class="servico">
+                            <div class="servico-numero bg-info">3</div>
+                            <h3>Dpuis posuere honsectetur pellentio</h3>
+                            <p>Yoed nisi turpis, pellentesque at ultrkoty ices in dapibus in magna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://www.facebook.com/seupetshop" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/seupetshop" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@seupetshop" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        
+        <hr style="border: 2px solid #FFFFFF; margin: 10px auto; width: 80%;">
+        
+        <p>&copy; 2025 Petshop Melhor Amigo. Desenvolvido por <strong>Davidson</strong> 
+            <a href="https://www.linkedin.com/in/davidson-desenvolvedor/" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fab fa-linkedin"></i>
+            </a>. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

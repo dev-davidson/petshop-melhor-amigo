@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - Petshop Melhor Amigo</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/galeria.css">
+    <title>Petshop Melhor Amigo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
 </head>
 <body>
-    
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Petshop Melhor Amigo</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="bg-primary py-3">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <img src="./imagens/logo1.png" alt="Logo Petshop Melhor Amigo" class="logo">
+            <p class="slogan text-white text-center">Cuidando com <span class="slogan-destaque">amor</span>, porque seu pet merece o <span class="slogan-destaque">melhor!</span></p>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="home.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <!-- Seção Galeria -->
@@ -45,10 +48,24 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé --> 
     <footer>
-        <p>&copy; 2025 Petshop Melhor Amigo. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <a href="https://www.facebook.com/seupetshop" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/seupetshop" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@seupetshop" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        
+        <hr style="border: 2px solid #FFFFFF; margin: 10px auto; width: 80%;">
+        
+        <p>&copy; 2025 Petshop Melhor Amigo. Desenvolvido por <strong>Davidson</strong> 
+            <a href="https://www.linkedin.com/in/davidson-desenvolvedor/" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fab fa-linkedin"></i>
+            </a>. Todos os direitos reservados.
+        </p>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

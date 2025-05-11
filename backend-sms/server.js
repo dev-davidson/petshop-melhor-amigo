@@ -1,4 +1,8 @@
-require('dotenv').config();
+require('dotenv').config({ path: './backend-sms/.env' }); // 👈 atualize o caminho conforme necessário
+
+console.log("SID:", process.env.TWILIO_ACCOUNT_SID);
+console.log("TOKEN:", process.env.TWILIO_AUTH_TOKEN);
+
 const express = require('express');
 const cors = require('cors');
 const twilio = require('twilio');
@@ -7,24 +11,34 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioNumber = process.env.TWILIO_PHONE_NUMBER;
+// Twilio config
+const client = twilio(
+  process.env.TWILIO_ACCOUNT_SID,
+  process.env.TWILIO_AUTH_TOKEN
+);
 
-const client = twilio(accountSid, authToken);
+// Endpoint para receber dados do formulário
+app.post('/enviar-sms', async (req, res) => {
+  const { nome, telefone, data, mensagem } = req.body;
 
-app.post('/send-sms', (req, res) => {
-    const { phoneNumber, message } = req.body;
+  const texto = `🐾 Agendamento Petshop 🐶🐱\nNome: ${nome}\nTelefone: ${telefone}\nData: ${data}\nMensagem: ${mensagem}`;
 
-    client.messages
-        .create({
-            body: message,
-            from: twilioNumber,
-            to: phoneNumber
-        })
-        .then(() => res.status(200).json({ success: true, message: 'SMS enviado com sucesso!' }))
-        .catch(error => res.status(500).json({ success: false, error: error.message }));
+  try {
+    const sms = await client.messages.create({
+      body: texto,
+      from: process.env.TWILIO_PHONE_NUMBER=+13183296177,
+      to: +5531993079970 // pode ser o número do cliente ou do petshop
+    });
+
+    res.status(200).json({ sucesso: true, sid: sms.sid });
+  } catch (erro) {
+    console.error('Erro ao enviar SMS:', erro.message);
+    res.status(500).json({ sucesso: false, erro: erro.message });
+  }
 });
 
+// Iniciar servidor
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`🚀 Servidor rodando em http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+});
